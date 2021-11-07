@@ -14,7 +14,7 @@ pip install git+ssh://git@github.com/rlipperts/python_package_template.git
 To automatically install the logging configurator with your python package include these lines in your setup.py
 ```python
 install_requires = [
-    'python-package-template @ git+ssh://git@github.com/rlipperts/formatter.git@master#egg=python-package-template-0.0.2',
+    'python-package-template @ git+ssh://git@github.com/rlipperts/python-package-template.git@master#egg=python-package-template-0.0.0',
 ],
 ```
 Make sure you update the version in the `egg=python-package-template-...` portion to the correct version specified in the logging-configurators setup.py. This might not work if you plan on publishing your package on PyPI.
