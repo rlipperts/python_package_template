@@ -22,7 +22,7 @@ jobs:
     - name: Check setup.py
       run: |
         md5=($(md5sum setup.py))
-        if [[ $md5 == "f932569933e696cee021f829977476f0" ]] ;then
+        if [[ $md5 == "3099903589b629929c0e465e78725724" ]] ;then
           echo 'Your setup.py still is in default template state, you should change it!'
           exit 1
         fi
@@ -31,6 +31,13 @@ jobs:
         dir="src/package_name"
         if [[ -d "$dir" ]] ;then
           echo 'You did not change the name of your package, you  should change it!'
+          exit 1
+        fi
+    - name: Check tox.ini
+      run: |
+        md5=($(md5sum tox.ini))
+        if [[ $md5 == "3099903589b629929c0e465e78725724" ]] ;then
+          echo 'You need to change the package-name referenced in tox.ini on line 32!'
           exit 1
         fi
     - name: Check test_name

@@ -4,6 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 test_deps = [
+    'tox',
     'pytest',
     'flake8',
     'pylint',
@@ -30,10 +31,10 @@ setuptools.setup(
     install_requires=[
     ],
     classifiers=[
-        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.11",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Topic :: https://pypi.org/classifiers/",
     ],
-    python_requires='~=3.9',
+    python_requires='~=3.11',
 )
