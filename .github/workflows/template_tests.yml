@@ -14,7 +14,7 @@ jobs:
     - name: Check Readme
       run: |
         md5=($(md5sum README.md))
-        if [[ $md5 == "604ebe9844a9c082812d76e23f202c17" ]] ;then
+        if [[ $md5 == "e43bdc6101d8da7596dc125475e07c77" ]] ;then
           echo ${{ github.event.repository.name }}
           echo 'Your readme still is in default template state, you should change it!'
           exit 1
@@ -22,7 +22,7 @@ jobs:
     - name: Check setup.py
       run: |
         md5=($(md5sum setup.py))
-        if [[ $md5 == "3099903589b629929c0e465e78725724" ]] ;then
+        if [[ $md5 == "d2a7ad1ed35d94704846fce235b8dffd" ]] ;then
           echo 'Your setup.py still is in default template state, you should change it!'
           exit 1
         fi
