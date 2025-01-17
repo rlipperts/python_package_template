@@ -14,7 +14,7 @@ jobs:
     - name: Check Readme
       run: |
         md5=($(md5sum README.md))
-        if [[ $md5 == "061ff373b690ade43ed6468f11fa13c6" ]] ;then
+        if [[ $md5 == "0630ae81ed5fa98d7bc3ffe37b92a41c" ]] ;then
           echo 'Your readme still is in default template state, you should change it!'
           exit 1
         fi

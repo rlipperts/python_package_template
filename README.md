@@ -4,14 +4,9 @@ _Default files and structure for python package repositories (aimed at personal 
 ## installation
 There are no PyPI releases. Neither are they planned.
 
-### manual
-For installation with pip directly from this GitHub repository simply open a terminal and type
-```
-pip install git+ssh://git@github.com/rlipperts/python_package_template.git
-```
-
 ### setup project environment for development
 To setup this project to develop in it:
+- Install python 3.12 and [poetry](https://python-poetry.org/docs/)
 - Adjust template
     - edit this readme
     - change your package-name `src/package_name` and module name `src/package_name/module_name.py`
