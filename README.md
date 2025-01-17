@@ -10,14 +10,19 @@ For installation with pip directly from this GitHub repository simply open a ter
 pip install git+ssh://git@github.com/rlipperts/python_package_template.git
 ```
 
-### setup.py
-To automatically install <your package name> with your python package include these lines in your setup.py
-```python
-install_requires = [
-    'python-package-template @ git+ssh://git@github.com/rlipperts/python-package-template.git@master#egg=python-package-template-0.0.0',
-],
-```
-Make sure you update the version in the `egg=python-package-template-...` portion to the correct version specified in the <your package name> setup.py. This might not work if you plan on publishing your package on PyPI.
+### setup project environment for development
+To setup this project to develop in it:
+- Adjust template
+    - edit this readme
+    - change your package-name `src/package_name` and module name `src/package_name/module_name.py`
+    - change the name of the test under `tests/test_module_name.py`
+    - change the name of your project in the `pyproject.toml`
+    - remove the template workflow under `.github/workflows/template_tests.yml`
+- Setup poetry environment
+    - `poetry lock`
+    - `poetry install --with dev`
+- Install the ruff pre-commit hooks
+    - `poetry run pre-commit install`
 
 ## usage
 

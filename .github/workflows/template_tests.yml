@@ -14,16 +14,15 @@ jobs:
     - name: Check Readme
       run: |
         md5=($(md5sum README.md))
-        if [[ $md5 == "e43bdc6101d8da7596dc125475e07c77" ]] ;then
-          echo ${{ github.event.repository.name }}
+        if [[ $md5 == "061ff373b690ade43ed6468f11fa13c6" ]] ;then
           echo 'Your readme still is in default template state, you should change it!'
           exit 1
         fi
-    - name: Check setup.py
+    - name: Check pyproject.toml
       run: |
-        md5=($(md5sum setup.py))
-        if [[ $md5 == "d2a7ad1ed35d94704846fce235b8dffd" ]] ;then
-          echo 'Your setup.py still is in default template state, you should change it!'
+        md5=($(md5sum pyproject.toml))
+        if [[ $md5 == "3fbab68191ee7c3bca721dc7d4557c2b" ]] ;then
+          echo 'Your pyproject.toml still is in default template state, you should change it!'
           exit 1
         fi
     - name: Check package_rename
@@ -31,13 +30,6 @@ jobs:
         dir="src/package_name"
         if [[ -d "$dir" ]] ;then
           echo 'You did not change the name of your package, you  should change it!'
-          exit 1
-        fi
-    - name: Check tox.ini
-      run: |
-        md5=($(md5sum tox.ini))
-        if [[ $md5 == "3099903589b629929c0e465e78725724" ]] ;then
-          echo 'You need to change the package-name referenced in tox.ini on line 32!'
           exit 1
         fi
     - name: Check test_name
