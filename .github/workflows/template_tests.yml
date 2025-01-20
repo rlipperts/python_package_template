@@ -27,7 +27,7 @@ jobs:
         fi
     - name: Check package_rename
       run: |
-        dir="src/package_name"
+        dir="src/python_package_template"
         if [[ -d "$dir" ]] ;then
           echo 'You did not change the name of your package, you  should change it!'
           exit 1
