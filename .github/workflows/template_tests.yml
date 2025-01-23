@@ -14,14 +14,14 @@ jobs:
     - name: Check Readme
       run: |
         md5=($(md5sum README.md))
-        if [[ $md5 == "0630ae81ed5fa98d7bc3ffe37b92a41c" ]] ;then
+        if [[ $md5 == "927c798066550364330de8f89b433e77" ]] ;then
           echo 'Your readme still is in default template state, you should change it!'
           exit 1
         fi
     - name: Check pyproject.toml
       run: |
         md5=($(md5sum pyproject.toml))
-        if [[ $md5 == "3fbab68191ee7c3bca721dc7d4557c2b" ]] ;then
+        if [[ $md5 == "7a8d214edd1977d68cdf5438c432b7e8" ]] ;then
           echo 'Your pyproject.toml still is in default template state, you should change it!'
           exit 1
         fi

@@ -11,7 +11,10 @@ To setup this project to develop in it:
     - edit this readme
     - change your package-name `src/package_name` and module name `src/package_name/module_name.py`
     - change the name of the test under `tests/test_module_name.py`
-    - change the name of your project in the `pyproject.toml`
+    - adjust the project data in the `pyproject.toml`
+        - change the name of your project
+        - adjust author, version, description
+        - update the path to your code in the `packages` table
     - remove the template workflow under `.github/workflows/template_tests.yml`
 - Setup poetry environment
     - `poetry lock`
