@@ -20,7 +20,7 @@ To setup this project to develop in it:
 - Setup poetry environment
     - `poetry lock`
     - `poetry install --with dev`
-- Install the ruff pre-commit hooks
+- __Optional:__ Install the ruff pre-commit hooks _(this forces you to make your code pretty before you can commit)_
     - `poetry run pre-commit install`
 
 ## usage
