@@ -7,6 +7,7 @@ There are no PyPI releases. Neither are they planned.
 ### setup project environment for development
 To setup this project to develop in it:
 - Install python 3.12 and [poetry](https://python-poetry.org/docs/)
+- Create your github repository using this template and clone it
 - Adjust template
     - edit this readme
     - change your package-name `src/package_name` and module name `src/package_name/module_name.py`
