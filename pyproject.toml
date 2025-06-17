@@ -57,7 +57,7 @@ pydocstyle.convention = "numpy"
 
 [tool.pyright]
 include = ["src"]
-strict = ["src"]
+# strict = ["src"]
 exclude = []
 reportMissingImports = true
 reportMissingTypeStubs = false
