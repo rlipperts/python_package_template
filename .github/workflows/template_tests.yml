@@ -21,7 +21,7 @@ jobs:
     - name: Check pyproject.toml
       run: |
         md5=($(md5sum pyproject.toml))
-        if [[ $md5 == "37ac07d263fad7995790db36b78763c9" ]] ;then
+        if [[ $md5 == "214d4b6ee95e50a942ca57f9b50b1200" ]] ;then
           echo 'Your pyproject.toml still is in default template state, you should change it!'
           exit 1
         fi
